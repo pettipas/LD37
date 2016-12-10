@@ -16,6 +16,11 @@ public class Hero : MonoBehaviour {
     [SerializeField]
     protected CharacterController ctrl;
 
+
+    [SerializeField]
+    public GunsOut gunsOut;
+
+
     [SerializeField]
     protected Walk walk;
     [SerializeField]
@@ -69,9 +74,9 @@ public class Hero : MonoBehaviour {
         }
     }
 
-    string ShotGunRun {
+    string GunsOutAnimation {
         get {
-            return "shotgun_run";
+            return "hero_show_weapon_torso";
         }
     }
 
@@ -95,9 +100,9 @@ public class Hero : MonoBehaviour {
         }
     }
 
-    public bool AnimateShotGunRun() {
-        if (!animator.IsNamedStateActive(ShotGunRun)) {
-            animator.Play(ShotGunRun, 0, 0);
+    public bool AnimateGunsOut() {
+        if (!animator.IsNamedStateActive(GunsOutAnimation)) {
+            animator.Play(GunsOutAnimation, 0, 0);
             return true;
         }
         return false;
@@ -138,6 +143,12 @@ public class Hero : MonoBehaviour {
     public Animator Animator{
         get{
             return animator;
+        }
+    }
+
+    public bool GunsOut {
+        get {
+            return gunsOut.enabled;
         }
     }
 
@@ -195,6 +206,7 @@ public class Hero : MonoBehaviour {
         gameObject.AddIfNull<TakeDamage>();
         gameObject.AddIfNull<MaterialFlasher>();
         gameObject.AddIfNull<SphereCollider>();
+        gameObject.AddIfNull<GunsOut>();
     }
 
     public void Reset(){
@@ -204,6 +216,7 @@ public class Hero : MonoBehaviour {
         damage.SafeDisable();
         invulnerability.SafeDisable();
         flasher.SafeDisable();
+        gunsOut.SafeDisable();
     }
 
     public void SetMode(Mode m){
@@ -236,6 +249,7 @@ public class Hero : MonoBehaviour {
             move.SafeDisable();
             damage.SafeEnable();
         }
+
     }
 
     public void Awake(){
@@ -249,6 +263,7 @@ public class Hero : MonoBehaviour {
         body = GetComponentInChildren<Body>();
         damage = GetComponentInChildren<TakeDamage>();
         flasher = GetComponent<MaterialFlasher>();
+        gunsOut = GetComponent<GunsOut>();
         characterCollider = GetComponent<SphereCollider>();
         Reset();
 
@@ -262,5 +277,6 @@ public enum Mode{
     Slide,
     Damaged,
     Invulnerable,
-    Vulnerable
+    Vulnerable,
+    Guns
 }
