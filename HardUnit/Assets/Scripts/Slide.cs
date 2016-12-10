@@ -21,6 +21,7 @@ public class Slide : HeroController {
 
         if(distanceConsumed>=distance){
             Hero.SetMode(Mode.Walk);
+            Hero.gunsOut.Resume();
         }
 
         Hero.Ctrl.Move(cachedDirection * speed * Time.smoothDeltaTime);

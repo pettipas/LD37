@@ -38,6 +38,7 @@ public class Walk : HeroController {
         if(!Hero.StandingStill && (Input.GetKeyDown(KeyCode.Space) || input.Action1.IsPressed) && !Hero.Slideing){
             input.Action1.ClearInputState();
             Hero.SetMode(Mode.Slide);
+            Hero.gunsOut.Pause();
         }
 
         if (Input.GetKeyUp(KeyCode.Alpha1)) {

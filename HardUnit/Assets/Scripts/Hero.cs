@@ -91,6 +91,7 @@ public class Hero : MonoBehaviour {
         } else if (other && !TakingDamage) {
             PushDir = (transform.position - other.position).normalized;
             SetMode(Mode.Damaged);
+            gunsOut.Pause();
         }
     }
 

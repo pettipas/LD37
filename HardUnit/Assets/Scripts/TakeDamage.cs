@@ -42,6 +42,7 @@ public class TakeDamage : HeroController {
         if(distanceConsumed >= distance){
             Hero.SetMode(Mode.Walk);
             Hero.SetMode(Mode.Invulnerable);
+            Hero.gunsOut.Resume();
         }
         Hero.Ctrl.Move(cachedDirection * speed * Time.deltaTime);
     }
