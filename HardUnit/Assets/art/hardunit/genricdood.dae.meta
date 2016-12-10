@@ -28,6 +28,17 @@ ModelImporter:
     100040: right_stride
     100042: slide_arm_impact
     100044: slide_ready
+    100046: ' 1'
+    100048: Box
+    100050: left_mid_stride_legs
+    100052: left_stride_legs
+    100054: pistols
+    100056: right_mid_stride_legs
+    100058: right_stride_legs
+    100060: shotgun
+    100062: shotgun_fired
+    100064: shotgun_ready
+    100066: onearmgun
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -51,6 +62,17 @@ ModelImporter:
     400040: right_stride
     400042: slide_arm_impact
     400044: slide_ready
+    400046: ' 1'
+    400048: Box
+    400050: left_mid_stride_legs
+    400052: left_stride_legs
+    400054: pistols
+    400056: right_mid_stride_legs
+    400058: right_stride_legs
+    400060: shotgun
+    400062: shotgun_fired
+    400064: shotgun_ready
+    400066: onearmgun
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -73,6 +95,18 @@ ModelImporter:
     2300038: right_stride
     2300040: slide_arm_impact
     2300042: slide_ready
+    2300044: ' 1'
+    2300046: Box
+    2300048: left_mid_stride_legs
+    2300050: left_stride_legs
+    2300052: pistols
+    2300054: right_mid_stride_legs
+    2300056: right_stride_legs
+    2300058: shotgun
+    2300060: shotgun_fired
+    2300062: shotgun_ready
+    2300064: //RootNode
+    2300066: onearmgun
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -95,6 +129,18 @@ ModelImporter:
     3300038: right_stride
     3300040: slide_arm_impact
     3300042: slide_ready
+    3300044: ' 1'
+    3300046: Box
+    3300048: left_mid_stride_legs
+    3300050: left_stride_legs
+    3300052: pistols
+    3300054: right_mid_stride_legs
+    3300056: right_stride_legs
+    3300058: shotgun
+    3300060: shotgun_fired
+    3300062: shotgun_ready
+    3300064: //RootNode
+    3300066: onearmgun
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -117,6 +163,16 @@ ModelImporter:
     4300038: slide_ready
     4300040: slide_arm_impact
     4300042: kneel_fist_akimbo
+    4300044: left_mid_stride_legs
+    4300046: right_mid_stride_legs
+    4300048: left_stride_legs
+    4300050: right_stride_legs
+    4300052: Box
+    4300054: onearmgun
+    4300056: shotgun_ready
+    4300058: shotgun
+    4300060: shotgun_fired
+    4300062: pistols
     9500000: //RootNode
   materials:
     importMaterials: 1

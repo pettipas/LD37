@@ -69,6 +69,12 @@ public class Hero : MonoBehaviour {
         }
     }
 
+    string ShotGunRun {
+        get {
+            return "shotgun_run";
+        }
+    }
+
     public void ForceIntoTakeDamage(Transform other) {
 
         if (Invulnerable) {
@@ -87,6 +93,14 @@ public class Hero : MonoBehaviour {
         if(direction != Vector3.zero){
             body.transform.forward = direction;
         }
+    }
+
+    public bool AnimateShotGunRun() {
+        if (!animator.IsNamedStateActive(ShotGunRun)) {
+            animator.Play(ShotGunRun, 0, 0);
+            return true;
+        }
+        return false;
     }
 
     public bool AnimateWalking(){
