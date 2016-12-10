@@ -18,7 +18,7 @@ public class TakeDamage : HeroController {
         get {
             return cachedDirection;
         }set {
-            cachedDirection = new Vector3(value.x,0,value.y);
+            cachedDirection = new Vector3(value.x,0,value.z);
         }
     }
 

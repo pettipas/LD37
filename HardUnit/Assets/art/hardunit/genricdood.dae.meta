@@ -39,6 +39,10 @@ ModelImporter:
     100062: shotgun_fired
     100064: shotgun_ready
     100066: onearmgun
+    100068: crawler_mid
+    100070: crawler_reach
+    100072: crawler_rest
+    100074: crawler_mid_pull
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -73,6 +77,10 @@ ModelImporter:
     400062: shotgun_fired
     400064: shotgun_ready
     400066: onearmgun
+    400068: crawler_mid
+    400070: crawler_reach
+    400072: crawler_rest
+    400074: crawler_mid_pull
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -107,6 +115,10 @@ ModelImporter:
     2300062: shotgun_ready
     2300064: //RootNode
     2300066: onearmgun
+    2300068: crawler_mid
+    2300070: crawler_reach
+    2300072: crawler_rest
+    2300074: crawler_mid_pull
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -141,6 +153,10 @@ ModelImporter:
     3300062: shotgun_ready
     3300064: //RootNode
     3300066: onearmgun
+    3300068: crawler_mid
+    3300070: crawler_reach
+    3300072: crawler_rest
+    3300074: crawler_mid_pull
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -173,6 +189,10 @@ ModelImporter:
     4300058: shotgun
     4300060: shotgun_fired
     4300062: pistols
+    4300066: crawler_rest
+    4300068: crawler_mid
+    4300070: crawler_reach
+    4300072: crawler_mid_pull
     9500000: //RootNode
   materials:
     importMaterials: 1
