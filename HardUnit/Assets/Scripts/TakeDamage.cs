@@ -33,6 +33,7 @@ public class TakeDamage : HeroController {
         distanceConsumed = 0;
         cachedDirection = Hero.PushDir;
         Hero.AnimateTakeDamage();
+
     }
 
     public void Update() {
@@ -43,6 +44,7 @@ public class TakeDamage : HeroController {
             Hero.SetMode(Mode.Walk);
             Hero.SetMode(Mode.Invulnerable);
             Hero.gunsOut.Resume();
+            Game.Instance.damage -= 1;
         }
         Hero.Ctrl.Move(cachedDirection * speed * Time.deltaTime);
     }
