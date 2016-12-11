@@ -215,7 +215,6 @@ public class Hero : MonoBehaviour {
     [ContextMenu("SetUp")]
     public void SetUp() {
         gameObject.AddIfNull<CharacterController>();
-        GetComponentInChildren<Animator>();
         gameObject.AddIfNull<Walk>();
         gameObject.AddIfNull<Slide>();
         gameObject.AddIfNull<Movement>();
@@ -273,7 +272,6 @@ public class Hero : MonoBehaviour {
     public void Awake(){
         direction = Vector3.zero;
         ctrl = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
         walk = GetComponent<Walk>();
         slide = GetComponent<Slide>();
         move = GetComponent<Movement>();

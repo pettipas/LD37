@@ -17,7 +17,7 @@ public class Game : MonoBehaviour {
     }
 
     public IEnumerator Start() {
-        yield return StartCoroutine(wiper.WipeIn(64,2));
+        yield return StartCoroutine(wiper.WipeIn(32,2));
         yield break;
     }
 
