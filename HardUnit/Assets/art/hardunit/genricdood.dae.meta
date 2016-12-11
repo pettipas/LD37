@@ -56,6 +56,9 @@ ModelImporter:
     100096: _5
     100098: crawler_dies
     100100: crawler_dies_1
+    100102: Box_1
+    100104: backwall
+    100106: sidewall
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -107,6 +110,9 @@ ModelImporter:
     400096: _5
     400098: crawler_dies
     400100: crawler_dies_1
+    400102: Box_1
+    400104: backwall
+    400106: sidewall
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -158,6 +164,9 @@ ModelImporter:
     2300096: _5
     2300098: crawler_dies
     2300100: crawler_dies_1
+    2300102: Box_1
+    2300104: backwall
+    2300106: sidewall
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -209,6 +218,9 @@ ModelImporter:
     3300096: _5
     3300098: crawler_dies
     3300100: crawler_dies_1
+    3300102: Box_1
+    3300104: backwall
+    3300106: sidewall
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -258,6 +270,9 @@ ModelImporter:
     4300094: _5
     4300096: crawler_dies
     4300098: crawler_dies_1
+    4300100: Box_1
+    4300102: sidewall
+    4300104: backwall
     9500000: //RootNode
   materials:
     importMaterials: 1

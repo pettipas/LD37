@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
@@ -8,16 +9,18 @@ public class Game : MonoBehaviour {
     public int damage = 3;
     public ScreenWiper wiper;
     public Death deathPrefab;
-
+    public List<Spawner> spawner = new List<Spawner>();
     bool ended;
 
     public void Awake() {
-        damage = 3;
+        damage = 1;
         Instance = this;
     }
 
     public IEnumerator Start() {
         yield return StartCoroutine(wiper.WipeIn(32,1));
+        yield return new WaitForSeconds(3);
+        StartCoroutine(SpawnTHings());
         yield break;
     }
 
@@ -27,6 +30,15 @@ public class Game : MonoBehaviour {
             ended = true;
             StartCoroutine(EndGame());
         }
+    }
+
+    public IEnumerator SpawnTHings() {
+        while (!ended) {
+            Spawner s = spawner[0];
+            s.SafeEnable();
+            yield return new WaitForSeconds(s.nextDealy);
+        }
+        yield break;
     }
 
     public IEnumerator EndGame() {

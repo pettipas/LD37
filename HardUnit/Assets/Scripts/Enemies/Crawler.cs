@@ -7,6 +7,10 @@ public class Crawler : MonoBehaviour {
     public Animator animator;
     public CrawlMotion motion;
 
+    void Awake() {
+        transform.localEulerAngles = new Vector3(0,180,0);
+    }
+
     void Update () {
         if (Hero.Instance != null) {
         }

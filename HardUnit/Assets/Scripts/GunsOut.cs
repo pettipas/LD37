@@ -5,12 +5,10 @@ public class GunsOut : HeroController {
 
     public WeaponTorso torso;
     public Weapon weapon;
-    public Animator weaponflash;
 
 
     public void Update() {
         if (torso.CurrentGun !=null && Input.GetMouseButtonUp(0)) {
-            weaponflash.Play("flash", 0, 0);
             torso.CurrentGun.Fire();
             CameraShake.Instance.Shake();
         }

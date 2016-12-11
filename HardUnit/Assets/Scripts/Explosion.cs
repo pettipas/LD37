@@ -12,6 +12,7 @@ public class Explosion : MonoBehaviour {
     IEnumerator Start () {
         sparkUp.Duplicate(transform.position);
         explosion.Duplicate(transform.position);
+        CameraShake.Instance.Shake(1.5f);
         yield return null;
         smokePrefab.Duplicate(transform.position);
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);

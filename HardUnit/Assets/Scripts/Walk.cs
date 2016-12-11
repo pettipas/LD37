@@ -8,6 +8,7 @@ public class Walk : HeroController {
 
     public void OnEnable(){
         Hero.Animator.Play("hero_walk",0,0);
+        Hero.gunsOut.SafeEnable();
     }
 
     public void Update(){
@@ -41,15 +42,6 @@ public class Walk : HeroController {
             Hero.gunsOut.Pause();
         }
 
-        if (Input.GetKeyUp(KeyCode.Alpha1)) {
-            if (Hero.gunsOut.enabled) {
-                Hero.gunsOut.SafeDisable();
-            }
-            else {
-                Hero.gunsOut.SafeEnable();
-            }
-           
-        }
     }
 
     void NormalWalk(){
