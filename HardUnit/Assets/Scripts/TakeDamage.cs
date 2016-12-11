@@ -33,7 +33,6 @@ public class TakeDamage : HeroController {
         distanceConsumed = 0;
         cachedDirection = Hero.PushDir;
         Hero.AnimateTakeDamage();
-
     }
 
     public void Update() {

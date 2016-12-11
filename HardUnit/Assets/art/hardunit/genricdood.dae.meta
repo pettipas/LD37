@@ -45,6 +45,12 @@ ModelImporter:
     100074: crawler_mid_pull
     100076: pistol
     100078: still_legs
+    100080: _2
+    100082: dead_head
+    100084: dead_legs
+    100086: dead_torso
+    100088: heart
+    100090: heart_1
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -85,6 +91,12 @@ ModelImporter:
     400074: crawler_mid_pull
     400076: pistol
     400078: still_legs
+    400080: _2
+    400082: dead_head
+    400084: dead_legs
+    400086: dead_torso
+    400088: heart
+    400090: heart_1
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -125,6 +137,12 @@ ModelImporter:
     2300074: crawler_mid_pull
     2300076: pistol
     2300078: still_legs
+    2300080: _2
+    2300082: dead_head
+    2300084: dead_legs
+    2300086: dead_torso
+    2300088: heart
+    2300090: heart_1
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -165,6 +183,12 @@ ModelImporter:
     3300074: crawler_mid_pull
     3300076: pistol
     3300078: still_legs
+    3300080: _2
+    3300082: dead_head
+    3300084: dead_legs
+    3300086: dead_torso
+    3300088: heart
+    3300090: heart_1
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -203,6 +227,12 @@ ModelImporter:
     4300072: crawler_mid_pull
     4300074: pistol
     4300076: still_legs
+    4300078: dead_head
+    4300080: heart_1
+    4300082: heart
+    4300084: _2
+    4300086: dead_legs
+    4300088: dead_torso
     9500000: //RootNode
   materials:
     importMaterials: 1

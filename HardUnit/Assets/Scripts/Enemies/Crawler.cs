@@ -7,7 +7,6 @@ public class Crawler : MonoBehaviour {
     public Animator animator;
     public CrawlMotion motion;
 
-
     void Update () {
         if (Hero.Instance != null) {
         }

@@ -17,8 +17,9 @@ public class Projectile : MonoBehaviour {
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, dir.normalized, out hit, 0.5f)) {
-            if (hit.transform.name == "ground") {
+            if (hit.transform.name != "hardunit") {
                 Destroy(gameObject);
+                hit.transform.GetComponent<DamageEnemy>().SafeEnable();
             }
         }
     }

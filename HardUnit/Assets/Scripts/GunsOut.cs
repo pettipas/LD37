@@ -4,8 +4,13 @@ using System.Collections;
 public class GunsOut : HeroController {
 
     public WeaponTorso torso;
-
     public Weapon weapon;
+
+    public void Update() {
+        if (torso.CurrentGun !=null && Input.GetMouseButtonUp(0)) {
+            torso.CurrentGun.Fire();
+        }
+    }
 
     public void Pause() {
         torso.HideAll();

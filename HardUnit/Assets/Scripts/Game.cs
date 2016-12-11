@@ -7,6 +7,7 @@ public class Game : MonoBehaviour {
     public static Game Instance;
     public int damage = 3;
     public ScreenWiper wiper;
+    public Death deathPrefab;
 
     bool ended;
 
@@ -16,7 +17,7 @@ public class Game : MonoBehaviour {
     }
 
     public IEnumerator Start() {
-        yield return StartCoroutine(wiper.WipeIn(32,1));
+        yield return StartCoroutine(wiper.WipeIn(64,2));
         yield break;
     }
 
@@ -29,7 +30,11 @@ public class Game : MonoBehaviour {
     }
 
     public IEnumerator EndGame() {
-        yield return StartCoroutine(wiper.WipeOut(1,32));
+        Death death = deathPrefab.Duplicate(Hero.Instance.transform.position);
+        Hero.Instance.gameObject.SetActive(false);
+        yield return StartCoroutine(death.DieNow());
+        yield return new WaitForSeconds(0.3f);
+        yield return StartCoroutine(wiper.WipeOut(2,32));
         SceneManager.LoadScene("main");
         yield break;
     }

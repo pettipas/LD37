@@ -8,6 +8,11 @@ public class WeaponTorso : MonoBehaviour {
     public Transform curser;
     public Transform hardPoint;
     Vector3 vel;
+
+    public Gun CurrentGun {
+        get;set;
+    }
+
     public void Awake() {
         curser = GameObject.Find("curser").transform;
         hardPoint = transform.parent;
@@ -27,6 +32,7 @@ public class WeaponTorso : MonoBehaviour {
             x.SetActive(false);
             if (x.name == wepName) {
                 x.SetActive(true);
+                CurrentGun = x.GetComponentInChildren<Gun>();
             }
         });
     }
@@ -36,5 +42,6 @@ public class WeaponTorso : MonoBehaviour {
             if(x!= null)
                 x.SetActive(false);
         });
+        CurrentGun = null;
     }
 }

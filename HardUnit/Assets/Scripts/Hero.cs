@@ -288,6 +288,7 @@ public class Hero : MonoBehaviour {
         SetMode(Mode.Walk);
         SetMode(Mode.Vulnerable);
         Instance = this;
+        name = "hardunit";
     }
 }
 
