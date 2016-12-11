@@ -43,6 +43,8 @@ ModelImporter:
     100070: crawler_reach
     100072: crawler_rest
     100074: crawler_mid_pull
+    100076: pistol
+    100078: still_legs
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -81,6 +83,8 @@ ModelImporter:
     400070: crawler_reach
     400072: crawler_rest
     400074: crawler_mid_pull
+    400076: pistol
+    400078: still_legs
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -119,6 +123,8 @@ ModelImporter:
     2300070: crawler_reach
     2300072: crawler_rest
     2300074: crawler_mid_pull
+    2300076: pistol
+    2300078: still_legs
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -157,6 +163,8 @@ ModelImporter:
     3300070: crawler_reach
     3300072: crawler_rest
     3300074: crawler_mid_pull
+    3300076: pistol
+    3300078: still_legs
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -193,6 +201,8 @@ ModelImporter:
     4300068: crawler_mid
     4300070: crawler_reach
     4300072: crawler_mid_pull
+    4300074: pistol
+    4300076: still_legs
     9500000: //RootNode
   materials:
     importMaterials: 1

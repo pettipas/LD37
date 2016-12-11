@@ -83,6 +83,12 @@ public class Hero : MonoBehaviour {
         }
     }
 
+    string GunsOutAnimationRest {
+        get {
+            return "hero_show_weapon_torso_rest";
+        }
+    }
+
     public void ForceIntoTakeDamage(Transform other) {
 
         if (Invulnerable) {
@@ -107,6 +113,14 @@ public class Hero : MonoBehaviour {
     public bool AnimateGunsOut() {
         if (!animator.IsNamedStateActive(GunsOutAnimation)) {
             animator.Play(GunsOutAnimation, 0, 0);
+            return true;
+        }
+        return false;
+    }
+
+    public bool AnimateGunsOutRest() {
+        if (!animator.IsNamedStateActive(GunsOutAnimationRest)) {
+            animator.Play(GunsOutAnimationRest, 0, 0);
             return true;
         }
         return false;

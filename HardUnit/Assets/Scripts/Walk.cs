@@ -27,7 +27,7 @@ public class Walk : HeroController {
         }
         else {
             if (Hero.direction == Vector3.zero) {
-                Hero.AnimateResting();
+                Hero.AnimateGunsOutRest();
             }
             else {
                 Hero.AnimateGunsOut();
