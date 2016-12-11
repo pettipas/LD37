@@ -51,6 +51,11 @@ ModelImporter:
     100086: dead_torso
     100088: heart
     100090: heart_1
+    100092: _3
+    100094: _4
+    100096: _5
+    100098: crawler_dies
+    100100: crawler_dies_1
     400000: Box_10
     400002: Box_11
     400004: Box_12
@@ -97,6 +102,11 @@ ModelImporter:
     400086: dead_torso
     400088: heart
     400090: heart_1
+    400092: _3
+    400094: _4
+    400096: _5
+    400098: crawler_dies
+    400100: crawler_dies_1
     2300000: Box_10
     2300002: Box_11
     2300004: Box_12
@@ -143,6 +153,11 @@ ModelImporter:
     2300086: dead_torso
     2300088: heart
     2300090: heart_1
+    2300092: _3
+    2300094: _4
+    2300096: _5
+    2300098: crawler_dies
+    2300100: crawler_dies_1
     3300000: Box_10
     3300002: Box_11
     3300004: Box_12
@@ -189,6 +204,11 @@ ModelImporter:
     3300086: dead_torso
     3300088: heart
     3300090: heart_1
+    3300092: _3
+    3300094: _4
+    3300096: _5
+    3300098: crawler_dies
+    3300100: crawler_dies_1
     4300000: Box_4
     4300002: Box_5
     4300004: Box_7
@@ -233,6 +253,11 @@ ModelImporter:
     4300084: _2
     4300086: dead_legs
     4300088: dead_torso
+    4300090: _3
+    4300092: _4
+    4300094: _5
+    4300096: crawler_dies
+    4300098: crawler_dies_1
     9500000: //RootNode
   materials:
     importMaterials: 1

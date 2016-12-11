@@ -7,11 +7,22 @@ public class Death : MonoBehaviour {
     public Transform body;
     public Animator animatior;
     public List<GameObject> bits = new List<GameObject>();
+    public string deathani;
+    public bool onawake;
+
+    public IEnumerator Start() {
+        if (onawake) {
+            yield return StartCoroutine(DieNow());
+        }
+        else {
+            yield break;
+        }
+    }
 
 	public IEnumerator DieNow () {
-        animatior.Play("death_becomes_you", 0, 0);
+        animatior.Play(deathani, 0, 0);
         yield return null;
-        while (animatior.IsNamedStateActive("death_becomes_you")) {
+        while (animatior.IsNamedStateActive(deathani)) {
             yield return null;
         }
         body.transform.parent = null;

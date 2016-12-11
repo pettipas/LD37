@@ -17,7 +17,7 @@ public class Game : MonoBehaviour {
     }
 
     public IEnumerator Start() {
-        yield return StartCoroutine(wiper.WipeIn(32,2));
+        yield return StartCoroutine(wiper.WipeIn(32,1));
         yield break;
     }
 
@@ -34,7 +34,7 @@ public class Game : MonoBehaviour {
         Hero.Instance.gameObject.SetActive(false);
         yield return StartCoroutine(death.DieNow());
         yield return new WaitForSeconds(0.3f);
-        yield return StartCoroutine(wiper.WipeOut(2,32));
+        yield return StartCoroutine(wiper.WipeOut(1,32));
         SceneManager.LoadScene("main");
         yield break;
     }

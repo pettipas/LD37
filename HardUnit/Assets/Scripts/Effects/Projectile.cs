@@ -18,8 +18,12 @@ public class Projectile : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, dir.normalized, out hit, 0.5f)) {
             if (hit.transform.name != "hardunit") {
+                DamageEnemy d = hit.transform.GetComponent<DamageEnemy>();
+                if (d != null) {
+                    d.hits--;
+                    d.SafeEnable();
+                }
                 Destroy(gameObject);
-                hit.transform.GetComponent<DamageEnemy>().SafeEnable();
             }
         }
     }

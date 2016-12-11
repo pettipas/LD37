@@ -6,6 +6,8 @@ public class DamageEnemy : MonoBehaviour {
     public MaterialFlasher matFLasher;
     public float flashTimer = 0.5f;
     float timeFashed;
+    public int hits;
+    public Death death;
 
     public void OnEnable() {
         timeFashed = 0;
@@ -13,8 +15,15 @@ public class DamageEnemy : MonoBehaviour {
     }
 
     public void Update() {
-        if (timeFashed <= flashTimer) {
+        if (timeFashed >= flashTimer) {
             matFLasher.Flash = false;
+
+            if (hits <= 0) {
+                death.Duplicate(transform.position);
+                Destroy(gameObject);
+                return;
+            }
+
             enabled = false;
         }
         timeFashed += Time.smoothDeltaTime;
