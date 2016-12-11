@@ -27,9 +27,11 @@ public class Death : MonoBehaviour {
         }
         body.transform.parent = null;
         DestroyImmediate(body.gameObject);
-        bits.ForEach(x => {
-            x.SetActive(true);
-        });
+        for (int i = 0; i < bits.Count;i++ ) {
+            bits[i].transform.parent = null;
+            bits[i].SetActive(true);
+        }
+        Destroy(gameObject);
         yield break;
 	}
 }
