@@ -6,16 +6,27 @@ public class Spawner : MonoBehaviour {
 
     public GameObject prefab;
     public List<Transform> spawnPoints = new List<Transform>();
-    public float nextDealy;
 
-    public void OnEnable() {
+    public void Spawn() {
+        Ready = false;
+        timePassed = 0;
         spawnPoints.ForEach(x => {
            prefab.Duplicate(x.position);
         });
     }
 
+    public float timer;
+    float timePassed;
+
+    public bool Ready {
+        get;set;
+    }
+
     public void Update() {
-        enabled = false;
+        if (timePassed >= timer) {
+            Ready = true;
+        }
+        timePassed += Time.smoothDeltaTime;
     }
 
     public void OnDrawGizmos() {

@@ -19,7 +19,8 @@ public class DamageEnemy : MonoBehaviour {
             matFLasher.Flash = false;
 
             if (hits <= 0) {
-                death.Duplicate(transform.position);
+                if(death != null)
+                    death.Duplicate(transform.position);
                 Destroy(gameObject);
                 return;
             }

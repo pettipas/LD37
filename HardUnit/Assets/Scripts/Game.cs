@@ -33,10 +33,14 @@ public class Game : MonoBehaviour {
     }
 
     public IEnumerator SpawnTHings() {
+
         while (!ended) {
-            Spawner s = spawner[0];
-            s.SafeEnable();
-            yield return new WaitForSeconds(s.nextDealy);
+            spawner.ForEach(x => {
+                if (x.Ready) {
+                    x.Spawn();
+                }
+            });
+            yield return null;
         }
         yield break;
     }

@@ -3,13 +3,10 @@ using System.Collections;
 
 public class Seeker : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public NavMeshAgent agent;
+
+    public void Update() {
+        if(agent != null && Hero.Instance)
+            agent.SetDestination(Hero.Instance.transform.position);
+    }
 }
