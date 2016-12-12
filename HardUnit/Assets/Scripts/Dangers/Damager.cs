@@ -12,6 +12,22 @@ public class Damager : MonoBehaviour {
             if (hero) {
                 hero.ForceIntoTakeDamage(transform);
             }
+            if (collider[i].transform.name == "end") {
+                Game.Instance.damage = 0;
+            }
+
+            if (collider[i].transform.name == "gates") {
+                transform.GetComponent<Crawler>().crawlerspeed = 2.5f;
+            }
+
+
+            if (collider[i].transform.name == "halfway") {
+                transform.GetComponent<Crawler>().crawlerspeed = 3.0f;
+            }
+
+            if (collider[i].transform.name == "mostal") {
+                transform.GetComponent<Crawler>().crawlerspeed = 3.5f;
+            }
         }
 	}
 

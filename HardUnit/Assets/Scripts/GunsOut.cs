@@ -8,8 +8,11 @@ public class GunsOut : HeroController {
 
 
     public void Update() {
-        if (torso.CurrentGun !=null && Input.GetMouseButtonUp(0)) {
+        if (torso.CurrentGun != null && Input.GetMouseButtonUp(0) && gameObject) {
             torso.CurrentGun.Fire();
+            CameraShake.Instance.Shake();
+        } else if (Hero.auto >= 1 && Input.GetMouseButton(0) && gameObject) {
+            if (torso != null && torso.CurrentGun != null) torso.CurrentGun.Fire();
             CameraShake.Instance.Shake();
         }
     }

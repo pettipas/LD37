@@ -6,6 +6,7 @@ using System.Linq;
 public class MaterialFlasher : MonoBehaviour {
 
     public bool animateOnAwake;
+    public Color dye;
 
     public Color flashA;
     public Color flashB;
@@ -43,7 +44,8 @@ public class MaterialFlasher : MonoBehaviour {
 
     public void OnDisable(){
         for(int i = 0;i< renderers.Count;i++){
-            renderers[i].material.color = colors[i];
+            if(renderers[i]!= null)
+                renderers[i].material.color = colors[i];
         }
     }
 
@@ -58,6 +60,7 @@ public class MaterialFlasher : MonoBehaviour {
         }
 
         renderers.ForEach(r=>{
+            r.material.color = dye;
             colors.Add(r.material.color);
         });
 

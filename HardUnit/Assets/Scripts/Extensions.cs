@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public static class Extensions {
+
+    public static System.Random localRandom = new System.Random();
 
     public static void SafeEnable<T>(this T mono) where T : MonoBehaviour{
         if(mono != null && !mono.enabled){
@@ -39,5 +43,19 @@ public static class Extensions {
 
     public static T Duplicate<T>(this T prefab, Transform transform) where T : Object {
         return prefab.Duplicate(transform.position, transform.rotation);
+    }
+
+    public static T GetRandomElement<T>(this IEnumerable<T> list, out int choice) {
+        choice = -1;
+        if (list.Count() == 0)
+            return default(T);
+        choice = localRandom.Next(list.Count());
+        return list.ElementAt(choice);
+    }
+
+    public static T GetRandomElement<T>(this IEnumerable<T> list) {
+        if (list.Count() == 0)
+            return default(T);
+        return list.ElementAt(localRandom.Next(list.Count()));
     }
 }

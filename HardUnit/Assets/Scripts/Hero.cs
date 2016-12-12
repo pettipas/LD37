@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using System.Collections.Generic; 
 
 public class Hero : MonoBehaviour {
 
-
+    public int super = 1;
+    public float fast = 0;
+    public int auto = 1;
+    float initialHeight;
     public static Hero Instance;
 
     public Vector3 resultant;
@@ -101,6 +105,24 @@ public class Hero : MonoBehaviour {
             PushDir = (transform.position - other.position).normalized;
             SetMode(Mode.Damaged);
             gunsOut.Pause();
+        }
+    }
+
+    public void ApplyBonus(string bonus) {
+        if (bonus == "super") {
+            super++;
+        }
+        else if (bonus == "fast") {
+            fast+=0.2f;
+        }
+        else if (bonus == "auto") {
+            auto++;
+        }
+        else {
+            Game.Instance.damage += 1;
+            if (Game.Instance.damage > 3) {
+                Game.Instance.damage = 3;
+            }
         }
     }
 
@@ -287,6 +309,11 @@ public class Hero : MonoBehaviour {
         SetMode(Mode.Vulnerable);
         Instance = this;
         name = "hardunit";
+        initialHeight = transform.position.y;
+    }
+
+    public void LateUpdate() {
+        transform.position = new Vector3(transform.position.x,initialHeight, transform.position.z);
     }
 }
 

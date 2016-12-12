@@ -9,6 +9,8 @@ public class DamageEnemy : MonoBehaviour {
     public int hits;
     public Death death;
 
+    public bool givesItem;
+
     public void OnEnable() {
         timeFashed = 0;
         matFLasher.Flash = true;
@@ -19,7 +21,9 @@ public class DamageEnemy : MonoBehaviour {
             matFLasher.Flash = false;
 
             if (hits <= 0) {
-                if(death != null)
+                if (death != null)
+                    Game.Instance.score += 100;
+                    death.givesItem = givesItem;
                     death.Duplicate(transform.position);
                 Destroy(gameObject);
                 return;

@@ -9,6 +9,9 @@ public class Death : MonoBehaviour {
     public List<GameObject> bits = new List<GameObject>();
     public string deathani;
     public bool onawake;
+    public List<GameObject> bonus = new List<GameObject>();
+    public bool givesItem;
+
 
     public IEnumerator Start() {
         if (onawake) {
@@ -31,6 +34,13 @@ public class Death : MonoBehaviour {
             bits[i].transform.parent = null;
             bits[i].SetActive(true);
         }
+        if (givesItem) {
+            GameObject frab = bonus.GetRandomElement();
+            GameObject g = frab.Duplicate(transform.position);
+            g.name = frab.name;
+            Time.timeScale += 0.5f;
+        }
+
         Destroy(gameObject);
         yield break;
 	}

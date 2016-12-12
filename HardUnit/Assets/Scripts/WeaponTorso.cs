@@ -20,6 +20,7 @@ public class WeaponTorso : MonoBehaviour {
     }
 
     public void Update() {
+        curser.transform.position = new Vector3(curser.transform.position.x,transform.position.y, curser.transform.position.z);
         transform.LookAt(curser);
         transform.position = Vector3.SmoothDamp(transform.position, hardPoint.position,ref vel, 0.01f);
     }

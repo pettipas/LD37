@@ -45,6 +45,6 @@ public class Walk : HeroController {
     }
 
     void NormalWalk(){
-        Hero.Ctrl.Move(Hero.direction * speed * Time.smoothDeltaTime);
+        Hero.Ctrl.Move(Hero.direction * (speed + Hero.Instance.fast) * Time.smoothDeltaTime);
     }
 }

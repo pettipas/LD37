@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Crawler : MonoBehaviour {
 
-
+    public float crawlerspeed;
     public Animator animator;
     public CrawlMotion motion;
 
     void Awake() {
+        crawlerspeed = 1.5f;
         transform.localEulerAngles = new Vector3(0,180,0);
     }
 
@@ -19,7 +20,7 @@ public class Crawler : MonoBehaviour {
         }
 
         if (motion.Move) {
-            transform.position += transform.forward * 1.0f * Time.smoothDeltaTime;
+            transform.position += transform.forward * crawlerspeed * Time.smoothDeltaTime;
         }
     }
 }
