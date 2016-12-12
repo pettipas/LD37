@@ -17,7 +17,7 @@ public class Damager : MonoBehaviour {
             }
 
             if (collider[i].transform.name == "gates") {
-                transform.GetComponent<Crawler>().crawlerspeed = 2.5f;
+                transform.GetComponent<Crawler>().crawlerspeed = 6f;
             }
 
 

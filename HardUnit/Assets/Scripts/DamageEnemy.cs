@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class DamageEnemy : MonoBehaviour {
+    public AudioSource hit;
 
     public MaterialFlasher matFLasher;
-    public float flashTimer = 0.5f;
+    float flashTimer = 0.1f;
     float timeFashed;
     public int hits;
     public Death death;
@@ -14,18 +15,21 @@ public class DamageEnemy : MonoBehaviour {
     public void OnEnable() {
         timeFashed = 0;
         matFLasher.Flash = true;
+        hit.Play();
     }
 
     public void Update() {
+     
         if (timeFashed >= flashTimer) {
             matFLasher.Flash = false;
-
+          
             if (hits <= 0) {
-                if (death != null)
+                if (death != null) {
                     Game.Instance.score += 100;
                     death.givesItem = givesItem;
                     death.Duplicate(transform.position);
-                Destroy(gameObject);
+                    Destroy(gameObject);
+                }
                 return;
             }
 

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 
+    public AudioSource ends;
+
     public Text scoreText;
     public Text gameOver;
     public Text hearts;
@@ -74,11 +76,13 @@ public class Game : MonoBehaviour {
     public IEnumerator EndGame() {
         Death death = deathPrefab.Duplicate(Hero.Instance.transform.position);
         Hero.Instance.gameObject.SetActive(false);
+        ends.Play();
         yield return StartCoroutine(death.DieNow());
         yield return new WaitForSeconds(0.3f);
         yield return StartCoroutine(wiper.WipeOut(1,32));
         gameOver.enabled = true;
-        while (!Input.anyKey) {
+   
+        while (!Input.anyKeyDown) {
             yield return null;
         }
         SceneManager.LoadScene("main");

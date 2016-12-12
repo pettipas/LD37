@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Death : MonoBehaviour {
-
+    public AudioSource cry;
+    public AudioSource explosion;
     public Transform body;
     public Animator animatior;
     public List<GameObject> bits = new List<GameObject>();
@@ -23,6 +24,14 @@ public class Death : MonoBehaviour {
     }
 
 	public IEnumerator DieNow () {
+
+        if (cry != null) {
+            cry.Play();
+        }
+        if (explosion != null) {
+            explosion.Play();
+        }
+
         animatior.Play(deathani, 0, 0);
         yield return null;
         while (animatior.IsNamedStateActive(deathani)) {
@@ -38,7 +47,7 @@ public class Death : MonoBehaviour {
             GameObject frab = bonus.GetRandomElement();
             GameObject g = frab.Duplicate(transform.position);
             g.name = frab.name;
-            Time.timeScale += 0.5f;
+            Time.timeScale += 0.1f;
         }
 
         Destroy(gameObject);

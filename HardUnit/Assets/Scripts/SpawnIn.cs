@@ -3,8 +3,18 @@ using System.Collections;
 
 public class SpawnIn : MonoBehaviour {
 
+    public AudioSource noise;
+    public AudioSource thump;
     public Hero heroPrefab;
     public Animator spawnEffect;
+
+    public void PlaySource() {
+        thump.Play();
+    }
+
+    public void PlayNoiseSource() {
+        noise.Play();
+    }
 
     public IEnumerator Start() {
         spawnEffect.Play("animate_in", 0, 0);
@@ -16,4 +26,6 @@ public class SpawnIn : MonoBehaviour {
         DestroyImmediate(gameObject);
         yield break;
     }
+
+   
 }

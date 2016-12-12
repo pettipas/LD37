@@ -5,10 +5,11 @@ public class GunsOut : HeroController {
 
     public WeaponTorso torso;
     public Weapon weapon;
-
+    public AudioSource source;
 
     public void Update() {
         if (torso.CurrentGun != null && Input.GetMouseButtonUp(0) && gameObject) {
+            source.Play();
             torso.CurrentGun.Fire();
             CameraShake.Instance.Shake();
         } else if (Hero.auto >= 1 && Input.GetMouseButton(0) && gameObject) {

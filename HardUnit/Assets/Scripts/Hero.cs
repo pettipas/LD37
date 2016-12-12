@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class Hero : MonoBehaviour {
 
+    public AudioSource audioBonus;
+
     public int super = 1;
     public float fast = 0;
     public int auto = 1;
@@ -109,6 +111,7 @@ public class Hero : MonoBehaviour {
     }
 
     public void ApplyBonus(string bonus) {
+        audioBonus.Play();
         if (bonus == "super") {
             super++;
         }

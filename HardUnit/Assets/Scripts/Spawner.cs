@@ -35,16 +35,16 @@ public class Spawner : MonoBehaviour {
             DamageEnemy de = instance.GetComponent<DamageEnemy>();
 
             if (choice == 0) {
-                de.hits = 5;
+                de.hits = 3;
             }
             else if (choice == 1) {
-                de.hits = 8;
+                de.hits = 5;
             }
             else if (choice == 3) {
-                de.hits = 15;
+                de.hits = 8;
             }
             else {
-                de.hits = 20;
+                de.hits = 10;
             }
         });
     }
